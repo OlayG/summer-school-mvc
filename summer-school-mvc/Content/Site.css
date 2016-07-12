@@ -95,8 +95,28 @@ textarea {
     padding-top: 13px;
     display: block;
 }
+#sidebar-link{
+    display: inline;
+} 
 .dropdown-menu li a{
     padding-left: 0px;
+}
+ul.dropdown-menu{
+    width: 250px;
+    background-color: #354a5f;
+}
+.caret{
+    margin-left: 120px
+}
+i.fa.fa-angle-double-right{
+    padding-top: 3px;
+}
+#logo-pic{
+    width: 108px;
+}
+li.logo{
+    text-align:center;
+    margin-right: 28px;
 }
 
 
