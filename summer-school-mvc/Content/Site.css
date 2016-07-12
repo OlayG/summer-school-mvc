@@ -22,3 +22,92 @@ select,
 textarea {
     max-width: 280px;
 }
+
+
+/* --------------------------------------
+              Navbar/Sidebar
+   -------------------------------------- */
+.navbar-inverse .navSidebar-toggle{
+    border-color: #333333;
+}
+.navSidebar-toggle{
+    position: relative;
+    float: left;
+    padding: 9px 10px;
+    margin: 8px 15px;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+.navSidebar-toggle:hover{
+    background-color: #333333;
+}
+.navSidebar-toggle .icon-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 1px;
+  background-color: white;
+}
+.navSidebar-toggle .icon-bar + .icon-bar {
+  margin-top: 4px;
+}
+#wrapper.menuDisplayed .navbar-inverse .navbar-fixed-top{
+
+    width: 1333px;
+}
+
+/* --------------------------------------
+                  Sidebar
+   -------------------------------------- */
+#sidebar-wrapper{
+    z-index: 1;
+    position: absolute;
+    width: 0;
+    height: 100%;
+    overflow-y: hidden;
+    background: #2c3e50;
+}
+        /*Sidebar Toggle*/
+#wrapper.menuDisplayed #sidebar-wrapper{
+    width: 250px;
+}
+
+        /*Sidebar Styling*/
+.sidebar-nav{
+    padding: 0;
+    list-style: none;
+}
+.sidebar-nav li{
+    text-indent: 20px;
+    line-height: 40px;
+}
+.sidebar-nav li a{
+    display: block;
+    text-decoration: none;
+    color: #ddd;
+}
+.sidebar-nav li a:hover{
+    background: #16a085;
+}
+
+
+/* --------------------------------------
+                Main Content
+   -------------------------------------- */
+#page-content-wrapper{
+    width: 100%;
+    position: absolute;
+    padding: 15px;
+}
+        /*Sidebar Toggle*/
+#wrapper.menuDisplayed #page-content-wrapper{
+    padding-left: 265px;
+}
+
+/* --------------------------------------
+                  Footer
+   -------------------------------------- */
+#footer p{
+    padding: 10px 0;
+}
