@@ -9,20 +9,27 @@
             <img id="logo-pic" src="http://vignette4.wikia.nocookie.net/harrypotter/images/a/ae/Hogwartscrest.png/revision/latest/scale-to-width-down/215?cb=20110806202805&format=webp" alt="School Logo" />
         </div>
         <div class="row">
-            <div class="col-lg-pull-4">
-                <img src="#" alt="User Pic" class="img-circle img-responsive"/>
+            <div class="col-lg-4">
+                <img src="http://findicons.com/files/icons/1072/face_avatars/300/g04.png" alt="User Pic" class="img-circle img-responsive"/>
             </div>
-            <div class="col-lg-push-8">
-                <h4>Welcom, Admin</h4>
+            <div class="col-lg-8">
+                <h5 id="sidebar-h5">Welcome, Admin</h5>
             </div>
         </div>
         <hr />
         <ul class="sidebar-nav">
-            <li><a href="#">Menu</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"" ><span id="caretM" class="caret"></span>Menu</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i>Home</a></li>
+                    <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i>About</a></li>
+                    <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i>Contact</a></li>
+                </ul>
+            </li> 
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-users "></i> Student <span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                    <li id="sidebar-link"><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i>@Html.ActionLink("Add Students", "Index", "Students")</a></li>
+                    <li id="sidebar-link"><a href="@Url.Action("Index","Students")"><i class="fa fa-angle-double-right" aria-hidden="true"></i>Add Student</a></li>
                     <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i>Manage Student</a></li>
                     <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i>Something else here</a></li>
                     <li role="separator" class="divider"></li>
@@ -36,10 +43,19 @@
     <!--Page Content-->
     <div id="page-content-wrapper">
         <div class="container-fluid">
+
+            <ul class="nav nav-pills">
+                <li role="presentation" type="button" class="navSidebar-toggle pull-left" id="menu-toggle">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                </li>
+                @Html.Partial("_LoginPartial")
+            </ul>
+
             <div class="row">
                 <div class="col-lg-12">
                     <div class="jumbotron">
-                        <a id="menu-toggle" href="#" class="btn btn-success">Menu</a>
                         <h1>Summer School</h1>
                         <p class="lead">Enroll and Unroll students from this app.</p>
                     </div>
