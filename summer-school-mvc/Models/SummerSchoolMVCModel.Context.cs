@@ -26,5 +26,7 @@ namespace summer_school_mvc.Models
         }
     
         public virtual DbSet<Student> Students { get; set; }
+        public virtual DbSet<Cours> Courses { get; set; }
+        public virtual DbSet<StudentCours> StudentCourses { get; set; }
     }
 }

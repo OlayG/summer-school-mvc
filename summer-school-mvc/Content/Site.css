@@ -1,4 +1,5 @@
-﻿body {
+﻿@import 'https://fonts.googleapis.com/css?family=Open+Sans';
+body {
     padding-top: 0px;
     padding-bottom: 20px;
 }
@@ -40,7 +41,7 @@ textarea {
     border-radius: 4px;
 }
 .navSidebar-toggle:hover{
-    background-color: #428bca;
+    background-color: #2c3e50;
 }
 .navSidebar-toggle .icon-bar {
   display: block;
@@ -63,10 +64,11 @@ textarea {
 #sidebar-wrapper{
     z-index: 1;
     position: absolute;
-    width: 0;
+    width: 0px;
     height: 100%;
     overflow-y: hidden;
-    background: #2c3e50;
+    /*background: #2c3e50;*/
+    background: #34495e
 }
         /*Sidebar Toggle*/
 #wrapper.menuDisplayed #sidebar-wrapper{
@@ -88,7 +90,16 @@ textarea {
     color: #ddd;
 }
 .sidebar-nav li a:hover{
-    background: #16a085;
+    /*background: #16a085;*/
+    background:#2c3e50;
+    padding-left: 25px;
+    transition: 0.8s;
+}
+.sidebar-nav a#sidebar-link:hover{
+    margin-left: 0;
+}
+a#studentList.dropdown-toggle:hover{
+    margin-left: 0px;
 }
 .sidebar-nav li a i{
     float: left;
@@ -100,13 +111,17 @@ textarea {
 } 
 .dropdown-menu li a{
     padding-left: 0px;
+
+    
 }
 ul.dropdown-menu{
     width: 250px;
     background-color: #354a5f;
 }
+
 .caret{
-    margin-left: 120px
+    margin-left: 120px;
+    overflow-x: hidden;
 }
 #caretM{
     margin-left: 4px;
@@ -152,6 +167,29 @@ div.col-12{
         /*Sidebar Toggle*/
 #wrapper.menuDisplayed #page-content-wrapper{
     padding-left: 265px;
+}
+
+/* --------------------------------------
+        Placeholder dashboard
+   -------------------------------------- */
+
+.placeholders {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.placeholders h4 {
+  margin-bottom: 0;
+}
+.placeholder {
+  margin-bottom: 20px;
+}
+.placeholder img {
+  display: inline-block;
+  border-radius: 50%;
+}
+#placeHold1{
+    width: 200px;
+    height: 200px;
 }
 
 /* --------------------------------------
@@ -239,5 +277,12 @@ h1 .icon:last-child {
    -------------------------------------- */
 ul.nav-pills{
     margin-bottom: 10px;
-    background-color: #2c3e50;
+    /*background-color: #2c3e50;*/
+    background:#34495e;
+}
+ul.nav-pills a{
+    color: white;
+}
+ul.nav-pills li a:hover{
+    background: #2c3e50; 
 }

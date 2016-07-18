@@ -12,19 +12,16 @@ namespace summer_school_mvc.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Student
+    public partial class Cours
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Student()
+        public Cours()
         {
             this.StudentCourses = new HashSet<StudentCours>();
         }
     
-        public int StudentID { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public decimal EnrollmentFee { get; set; }
-        public decimal Balance { get; set; }
+        public int CourseID { get; set; }
+        public string CourseName { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<StudentCours> StudentCourses { get; set; }

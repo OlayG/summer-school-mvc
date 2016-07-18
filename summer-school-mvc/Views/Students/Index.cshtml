@@ -4,6 +4,30 @@
     ViewBag.Title = "Index";
 }
 
+
+<div class="row placeholders">
+    <div class="col-xs-6 col-sm-3 placeholder">
+        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+        <h4>Label</h4>
+        <span class="text-muted">Students</span>
+    </div>
+    <div class="col-xs-6 col-sm-3 placeholder">
+        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+        <h4>Label</h4>
+        <span class="text-muted">Accounts</span>
+    </div>
+    <div class="col-xs-6 col-sm-3 placeholder" >
+        <img src="http://pre12.deviantart.net/1ffd/th/pre/f/2013/266/e/c/harry_potter_and_the_deathly_hallows__d_by_speedportraits-d6nccbt.jpg" width="200" height="200" class="img-responsive" id="placeHold1" alt="Generic placeholder thumbnail">
+        <h4>Harry Potter</h4>
+        <span class="text-muted">Top Student</span>
+    </div>
+    <div class="col-xs-6 col-sm-3 placeholder">
+        <img src="https://upload.wikimedia.org/wikipedia/en/9/92/McGonagall.jpg" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+        <h4>Minerva McGonagall</h4>
+        <span class="text-muted">Top Falcuty</span>
+    </div>
+</div>
+
 <h2>Index</h2>
 
 <p>
@@ -20,26 +44,37 @@
         <th>
             @Html.DisplayNameFor(model => model.EnrollmentFee)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Balance)
+        </th>
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.FirstName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LastName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.EnrollmentFee)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.StudentID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.StudentID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.StudentID })
-        </td>
-    </tr>
-}
-
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EnrollmentFee)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Balance)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.StudentID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.StudentID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.StudentID })
+            </td>
+        </tr>
+    }
 </table>
+
+<div class="student-total">
+    <b class="amount-label">Total Student Enrollment:</b> 
+    <span class="amount">@String.Format("{0:C}", @ViewBag.totalSum)</span>
+</div>
